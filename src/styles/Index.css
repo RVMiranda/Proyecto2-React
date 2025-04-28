@@ -10,9 +10,9 @@
 .banner {
     display: flex;
     width: 100%;
-    height: 30rem;
+    height: 45rem;
     overflow: hidden;
-    background-image: url('/public/Banner.jpg') ;
+    background-image: url('/src/images/australia.jpg'); ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,7 +60,9 @@
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
+    background-color: white;
+    color: #444;
 }
 
 .grid-propiedades {

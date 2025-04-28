@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PropiedadCard from "../components/Propiedad-Card";
 import "../styles/Index.css";
+import australia from "../images/australia.jpg";
 
 export default function Home() {
     const [propiedades, setPropiedades] = useState([]);
@@ -19,33 +20,33 @@ export default function Home() {
 
     return (
         <div className="home-page">
-        <div className="banner">
-            
-            <div className="text-input">
-                    
-                <div className="texto">
-                    <h3>Book unique places to stay and things to do.</h3>
-                    <h3>Unforgettable trips start with Airbnb.</h3>
+            <div className="banner">
+                
+                <div className="text-input">
+                        
+                    <div className="texto">
+                        <h3>Book unique places to stay and things to do.</h3>
+                        <h3>Unforgettable trips start with Airbnb.</h3>
+                    </div>
+
+
+                    <div className="busqueda">
+                        <input type="text" placeholder="Search" value={busqueda} onChange={(e) => setBusqueda(e.target.value)}/>
+                    </div>
+
                 </div>
-
-
-                <div className="busqueda">
-                    <input type="text" placeholder="Search" value={busqueda} onChange={(e) => setBusqueda(e.target.value)}/>
-                </div>
-
             </div>
-        </div>
 
 
-        <div className="grid-propiedades">
-            {propiedadesFiltradas.length > 0 ? (
-            propiedadesFiltradas.map((prop) => (
-                <PropiedadCard key={prop.id} propiedad={prop} />
-            ))
-            ) : (
-            <p style={{color:"white", fontSize:"3em"}}>No se encontraron propiedades.</p>
-            )}
-        </div>
+            <div className="grid-propiedades">
+                {propiedadesFiltradas.length > 0 ? (
+                propiedadesFiltradas.map((prop) => (
+                    <PropiedadCard key={prop.id} propiedad={prop} />
+                ))
+                ) : (
+                <p style={{color:"white", fontSize:"3em"}}>No se encontraron propiedades.</p>
+                )}
+            </div>
         </div>
     );
 }
